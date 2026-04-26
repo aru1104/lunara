@@ -14,3 +14,15 @@ export const sendChat    = (message) => fetch(`${BASE}/chat`, {
   headers: {"Content-Type": "application/json"},
   body: JSON.stringify({message})
 }).then(r => r.json());
+
+const BASE_URL = import.meta.env.VITE_API_URL;
+
+export const chat = async (message) => {
+  const res = await fetch(`${BASE_URL}/chat`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message })
+  });
+
+  return res.json();
+};
