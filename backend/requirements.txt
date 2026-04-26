@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sqlalchemy
+python-dotenv
+groq
+pandas
+numpy
+scikit-learn
+flask
+flask-cors
